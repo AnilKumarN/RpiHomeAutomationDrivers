@@ -4,7 +4,7 @@ import serial
 
 class oxd5s05:
 
-	ser = .serialSerial("/dev/ttyAMA0",9600)
+	ser = serial.Serial("/dev/ttyAMA0",9600)
 	tx=""
 	rx=""
 
