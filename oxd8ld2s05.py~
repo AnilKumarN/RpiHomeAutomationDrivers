@@ -13,7 +13,7 @@ class oxd8ld2s05:
 
 		tx = ":SETM001$$"
 		ser.write(tx.encode("hex"))
-		rx = ser.read()
+		rx = ser.read(30)
 		return rx.decode("hex")
 
 
@@ -21,7 +21,7 @@ class oxd8ld2s05:
 		
 		tx = ":A00504$$"
 		ser.write(tx.encode("hex"))
-		rx = ser.read()
+		rx = ser.read(24)
 		return rx.decode("hex")
 
            
@@ -29,7 +29,7 @@ class oxd8ld2s05:
 
                 tx = ":A003001$$"
                 ser.write(tx.encode("hex"))
-                rx = ser.read()
+                rx = ser.read(24)
                 return rx.decode("hex")
 
 
@@ -55,7 +55,7 @@ class oxd8ld2s05:
 
                 tx = ":B3002$$"
                 ser.write(tx.encode("hex"))
-                rx = ser.read()
+                rx = ser.read(24)
                 return rx.decode("hex")
 
 
