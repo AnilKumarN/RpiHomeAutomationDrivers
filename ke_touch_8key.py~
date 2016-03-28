@@ -13,7 +13,7 @@ class ke_touch_8key:
 
 		tx = ":SETM001$$"
 		ser.write(tx.encode("hex"))
-		rx = ser.read()
+		rx = ser.read(30)
 		return rx.decode("hex")
 
 
@@ -21,7 +21,7 @@ class ke_touch_8key:
 		
 		tx = ":A00513$$"
 		ser.write(tx.encode("hex"))
-		rx = ser.read()
+		rx = ser.read(24)
 		return rx.decode("hex")
 
            
@@ -29,7 +29,7 @@ class ke_touch_8key:
 
                 tx = ":A003001$$"
                 ser.write(tx.encode("hex"))
-                rx = ser.read()
+                rx = ser.read(24)
                 return rx.decode("hex")
 
 
