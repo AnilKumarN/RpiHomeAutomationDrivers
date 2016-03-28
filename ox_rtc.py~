@@ -13,7 +13,7 @@ class ox_rtc:
 
 		tx = ":SETM001$$"
 		ser.write(tx.encode("hex"))
-		rx = ser.read()
+		rx = ser.read(30)
 		return rx.decode("hex")
 
 
@@ -21,7 +21,7 @@ class ox_rtc:
 		
 		tx = ":A00507$$"
 		ser.write(tx.encode("hex"))
-		rx = ser.read()
+		rx = ser.read(24)
 		return rx.decode("hex")
 
            
@@ -29,7 +29,7 @@ class ox_rtc:
 
                 tx = ":A003001$$"
                 ser.write(tx.encode("hex"))
-                rx = ser.read()
+                rx = ser.read(24)
                 return rx.decode("hex")
 
 
@@ -63,8 +63,16 @@ class ox_rtc:
 
                 tx = ":GB000$$"
                 ser.write(tx.encode("hex"))
-		rx = ser.read()
+		rx = ser.read(28)
+                rx2 = ser.read(30)
 		return rx.decode("hex")
 
+
+         def gate_req_date(self):
+
+                tx = ":GB000$$"
+                ser.write(tx.encode("hex"))
+                rx = ser.read(30)
+		return rx.decode("hex")
 
 
