@@ -13,7 +13,7 @@ class ox_rtc:
 
 		tx = ":SETM001$$"
 		ser.write(tx)
-		rx = ser.read(30)
+		rx = ser.read(15)
 		return rx
 
 
@@ -21,7 +21,7 @@ class ox_rtc:
 		
 		tx = ":A00507$$"
 		ser.write(tx)
-		rx = ser.read(24)
+		rx = ser.read(12)
 		return rx
 
            
@@ -29,7 +29,7 @@ class ox_rtc:
 
                 tx = ":A003001$$"
                 ser.write(tx)
-                rx = ser.read(24)
+                rx = ser.read(12)
                 return rx
 
 
@@ -63,8 +63,7 @@ class ox_rtc:
 
                 tx = ":GB000$$"
                 ser.write(tx)
-		rx = ser.read(28)
-                rx2 = ser.read(30)
+		rx = ser.read(14)
 		return rx
 
 
@@ -72,7 +71,7 @@ class ox_rtc:
 
                 tx = ":GB000$$"
                 ser.write(tx)
-                rx = ser.read(30)
+                rx = ser.read(15)
 		return rx
 
 

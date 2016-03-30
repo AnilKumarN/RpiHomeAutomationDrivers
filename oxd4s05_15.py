@@ -13,7 +13,7 @@ class oxd4s05_15:
 
 		tx = ":SETM001$$"
 		ser.write(tx)
-		rx = ser.read(30)
+		rx = ser.read(15)
 		return rx
 
 
@@ -21,7 +21,7 @@ class oxd4s05_15:
 		
 		tx = ":A00502$$"
 		ser.write(tx)
-		rx = ser.read(24)
+		rx = ser.read(13)
 		return rx
 
            
@@ -29,7 +29,7 @@ class oxd4s05_15:
 
                 tx = ":A003001$$"
                 ser.write(tx)
-                rx = ser.read(24)
+                rx = ser.read(13)
                 return rx
 
 
@@ -48,51 +48,51 @@ class oxd4s05_15:
          def operate_all_loads():
 
                 tx = ":B2002AAX00$$"
-                ser.write(tx
+                ser.write(tx)
 
 
          def load_status():
 
                 tx = ":B3002$$"
                 ser.write(tx)
-                rx = ser.read(24)
+                rx = ser.read(12)
                 return rx
 
 
          def default_all_on():
 
                 tx = ":D($$"
-                ser.write(tx
+                ser.write(tx)
 
 
          def default_all_off():
 
                 tx = ":D)$$"
-                ser.write(tx
+                ser.write(tx)
 
 
          def set_curtain_status():
 
                 tx = ":N1 004 1 1 012 014 $$"
-                ser.write(tx
+                ser.write(tx)
 
 
          def disable_curtain():
 
                 tx = ":N1 004 0 0 000 000 $$"
-                ser.write(tx
+                ser.write(tx)
 
 
          def curtain_operation():
 
                 tx = ":T 004 1 1 $$"
-                ser.write(tx
+                ser.write(tx)
 
 
          def stop_curtain():
 
                 tx = ":T004SX$$"
-                ser.write(tx
+                ser.write(tx)
 
 
 

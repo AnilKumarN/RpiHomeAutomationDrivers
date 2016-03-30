@@ -12,7 +12,7 @@ class oxd5s05:
 
 		tx = ":SETM001$$"
 		ser.write(tx)
-		rx = ser.read(30)
+		rx = ser.read(15)
 		return rx
 
 
@@ -20,14 +20,14 @@ class oxd5s05:
 		
 		tx = ":A00510$$"
 		ser.write(tx)
-		rx = ser.read(24)
+		rx = ser.read(12)
 		return rx
 
 	def check_module_product_id():
 		
 		tx = ":A003001$$"
 		ser.write(tx)
-		rx = ser.read(24)
+		rx = ser.read(12)
 		return rx
 
 
@@ -46,7 +46,7 @@ class oxd5s05:
 
 		tx = ":B3002$$"
 		ser.write(tx)
-		rx = ser.read(24)
+		rx = ser.read(12)
 		return rx
 
 	def default_on():

@@ -13,7 +13,7 @@ class ox_ir:
 
 		tx = ":SETM001$$"
 		ser.write(tx)
-		rx = ser.read(30)
+		rx = ser.read(15)
 		return rx
 
 
@@ -21,7 +21,7 @@ class ox_ir:
 		
 		tx = ":A00505$$"
 		ser.write(tx)
-		rx = ser.read(24)
+		rx = ser.read(12)
 		return rx
 
            
@@ -29,7 +29,7 @@ class ox_ir:
 
                 tx = ":A003001$$"
                 ser.write(tx)
-                rx = ser.read(24)
+                rx = ser.read(12)
                 return rx
 
 
